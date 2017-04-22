@@ -42,5 +42,9 @@ namespace QuestionServiceWebApi.Controllers
         public void Delete(int id)
         {
         }
+
+        public void Options()
+        {
+        }
     }
 }

@@ -1,0 +1,420 @@
+﻿html,
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 695px;
+    height: 100%;
+}
+
+.main-content {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 0 0 0 269px;
+    width: 100%;
+    height: calc(100% - 60px);
+}
+
+.static-navigation-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #c0c3c9;
+    z-index: 99999;
+    min-width: 725px;
+}
+
+.pt-logo-placeholder {
+    line-height: 60px;
+    width: 269px;
+    text-align: center;
+}
+
+.pt-navigation-menu-placeholder {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.pt-navigation-menu-buttons {
+    height: 60px;
+    float: left;
+    margin-left: 269px;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+    .pt-navigation-menu-buttons li {
+        display: inline-block;
+    }
+
+.pt-nav-btn {
+    display: inline-block;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 3.5px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+    .pt-nav-btn:hover {
+        outline: none;
+    }
+
+    .pt-nav-btn:active {
+        outline: none;
+    }
+
+    .pt-nav-btn:focus {
+        outline: none;
+    }
+
+.pt-home-btn {
+    background-color: #00adef;
+}
+
+    .pt-home-btn:hover {
+        transition: all 0.5s;
+        background-color: #46c0ef;
+        color: #ffffff;
+    }
+
+    .pt-home-btn:active {
+        transition: all 0.5s;
+        background-color: #00a4e3;
+        color: #ffffff;
+    }
+
+    .pt-home-btn:visited {
+        color: #ffffff;
+    }
+
+.pt-questions-btn {
+    background-color: #fb6d51;
+}
+
+    .pt-questions-btn:hover {
+        transition: all 0.5s;
+        background-color: #fc8370;
+        color: #ffffff;
+    }
+
+    .pt-questions-btn:active {
+        transition: all 0.5s;
+        background-color: #ee674d;
+        color: #ffffff;
+    }
+
+    .pt-questions-btn:visited {
+        color: #ffffff;
+    }
+
+.pt-about-btn {
+    background-color: #ac92ea;
+}
+
+    .pt-about-btn:hover {
+        transition: all 0.5s;
+        background-color: #ac92ea;
+        color: #ffffff;
+    }
+
+    .pt-about-btn:active {
+        transition: all 0.5s;
+        background-color: #8e74cf;
+        color: #ffffff;
+    }
+
+    .pt-about-btn:visited {
+        color: #ffffff;
+    }
+
+.pt-form-placeholder {
+    display: inline-block;
+    padding: 10px 19px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+[data-tooltip],
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+    [data-tooltip]:before,
+    [data-tooltip]:after,
+    .tooltip:before,
+    .tooltip:after {
+        position: absolute;
+        visibility: hidden;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        -webkit-transition: opacity 0.5s ease-in-out;
+        -moz-transition: opacity 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        pointer-events: none;
+    }
+
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after,
+    [data-tooltip]:focus:before,
+    [data-tooltip]:focus:after,
+    .tooltip:hover:before,
+    .tooltip:hover:after,
+    .tooltip:focus:before,
+    .tooltip:focus:after {
+        visibility: visible;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
+    }
+
+    .tooltip:before,
+    [data-tooltip]:before {
+        z-index: 1001;
+        border: 6px solid transparent;
+        background: transparent;
+        content: "";
+    }
+
+    .tooltip:after,
+    [data-tooltip]:after {
+        z-index: 1000;
+        padding: 8px;
+        width: 160px;
+        background-color: #000;
+        background-color: hsla(0, 0%, 20%, 0.9);
+        color: #fff;
+        content: attr(data-tooltip);
+        font-size: 14px;
+        line-height: 1.2;
+        border-radius: 20px;
+    }
+
+    [data-tooltip]:before,
+    [data-tooltip]:after,
+    .tooltip:before,
+    .tooltip:after,
+    .tooltip-top:before,
+    .tooltip-top:after {
+        bottom: 100%;
+        left: 50%;
+    }
+
+    [data-tooltip]:before,
+    .tooltip:before,
+    .tooltip-top:before {
+        margin-left: -6px;
+        margin-bottom: -12px;
+        border-top-color: #000;
+        border-top-color: hsla(0, 0%, 20%, 0.9);
+    }
+
+    [data-tooltip]:after,
+    .tooltip:after,
+    .tooltip-top:after {
+        margin-left: -80px;
+    }
+
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after,
+    [data-tooltip]:focus:before,
+    [data-tooltip]:focus:after,
+    .tooltip:hover:before,
+    .tooltip:hover:after,
+    .tooltip:focus:before,
+    .tooltip:focus:after,
+    .tooltip-top:hover:before,
+    .tooltip-top:hover:after,
+    .tooltip-top:focus:before,
+    .tooltip-top:focus:after {
+        -webkit-transform: translateY(-12px);
+        -moz-transform: translateY(-12px);
+        transform: translateY(-12px);
+    }
+
+.tooltip-left:before,
+.tooltip-left:after {
+    right: 100%;
+    bottom: 50%;
+    left: auto;
+}
+
+.tooltip-left:before {
+    margin-left: 0;
+    margin-right: -12px;
+    margin-bottom: 0;
+    border-top-color: transparent;
+    border-left-color: #000;
+    border-left-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-left:hover:before,
+.tooltip-left:hover:after,
+.tooltip-left:focus:before,
+.tooltip-left:focus:after {
+    -webkit-transform: translateX(-12px);
+    -moz-transform: translateX(-12px);
+    transform: translateX(-12px);
+}
+
+.tooltip-bottom:before,
+.tooltip-bottom:after {
+    top: 100%;
+    bottom: auto;
+    left: 50%;
+}
+
+.tooltip-bottom:before {
+    margin-top: -12px;
+    margin-bottom: 0;
+    border-top-color: transparent;
+    border-bottom-color: #000;
+    border-bottom-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-bottom:hover:before,
+.tooltip-bottom:hover:after,
+.tooltip-bottom:focus:before,
+.tooltip-bottom:focus:after {
+    -webkit-transform: translateY(12px);
+    -moz-transform: translateY(12px);
+    transform: translateY(12px);
+}
+
+.tooltip-right:before,
+.tooltip-right:after {
+    bottom: 50%;
+    left: 100%;
+}
+
+.tooltip-right:before {
+    margin-bottom: 0;
+    margin-left: -12px;
+    border-top-color: transparent;
+    border-right-color: #000;
+    border-right-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.tooltip-right:hover:before,
+.tooltip-right:hover:after,
+.tooltip-right:focus:before,
+.tooltip-right:focus:after {
+    -webkit-transform: translateX(12px);
+    -moz-transform: translateX(12px);
+    transform: translateX(12px);
+}
+
+.tooltip-left:before,
+.tooltip-right:before {
+    top: 3px;
+}
+
+.tooltip-left:after,
+.tooltip-right:after {
+    margin-left: 0;
+    margin-bottom: -16px;
+}
+
+::-webkit-scrollbar {
+    /* Scrollbar Basic Properties */
+    /* Width = Vertical || Height = Horizontal */
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-button {
+    /* Top and Bottom Arrow Buttons */
+}
+
+::-webkit-scrollbar-track {
+    /* Main area of the scrollbar (grey part on a normal scrollbar) */
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    /* Visible area underneath scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb {
+    /* Scrollbar thumb (slider) */
+    background-color: #C0C3C9;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+::-webkit-scrollbar-corner {
+    /* Corner seperating both scrollbars (when visible) */
+}
+
+::-webkit-scrollbar-resizer {
+    /* Reziser bars in place of scrollbar-corner */
+}
+
+.pt-form-label {
+    font-size: 12px;
+    font-weight: normal;
+    float: left;
+    margin-bottom: 15pz;
+}
+
+.pt-default-field-responsive {
+    width: 100%;
+    height: 31px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #adadad;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+
+    .pt-default-field-responsive:hover {
+        outline: none;
+        border-color: #007aff;
+    }
+
+    .pt-default-field-responsive:active {
+        outline: none;
+        border-color: #007aff;
+    }
+
+    .pt-default-field-responsive:focus {
+        outline: none;
+        border-color: #007aff;
+    }

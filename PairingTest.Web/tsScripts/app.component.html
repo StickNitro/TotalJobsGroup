@@ -1,0 +1,13 @@
+﻿<h1>{{Questionnaire.QuestionnaireTitle}}</h1>
+<form #f="ngForm" novalidate>
+    <div class="pt-form-placeholder">
+        <div *ngFor="let key of QuestionnaireKeys()">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-lg-3 form-group">
+                    <label class="pt-form-label">{{Questionnaire.QuestionsText[key]}}</label>
+                    <input type="text" class="pt-default-field-responsive" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

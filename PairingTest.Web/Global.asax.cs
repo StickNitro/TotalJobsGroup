@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using PairingTest.Web.App_Start;
+using System.Web.Optimization;
 
 namespace PairingTest.Web
 {
@@ -16,6 +17,7 @@ namespace PairingTest.Web
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }
