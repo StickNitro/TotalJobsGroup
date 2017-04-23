@@ -11,12 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
 const app_component_service_1 = require("./app.component.service");
+const QuestionnaireModel_1 = require("./Models/QuestionnaireModel");
 let AppComponent = class AppComponent {
     constructor(appComponentService) {
-        this.Questionnaire = {
-            "QuestionnaireTitle": "",
-            "QuestionsText": {}
-        };
+        this.Questionnaire = new QuestionnaireModel_1.QuestionnaireModel();
         this._appComponentService = null;
         this._appComponentService = appComponentService;
     }

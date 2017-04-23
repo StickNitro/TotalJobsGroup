@@ -1,5 +1,6 @@
 ﻿import { Component, OnInit } from "@angular/core";
 import { AppComponentService } from "./app.component.service";
+import { QuestionnaireModel, IQuestionnaireModel } from "./Models/QuestionnaireModel";
 
 @Component({
     selector: "question-app",
@@ -7,10 +8,7 @@ import { AppComponentService } from "./app.component.service";
     providers: [AppComponentService]
 })
 export class AppComponent implements OnInit {
-    public Questionnaire: any = {
-        "QuestionnaireTitle": "",
-        "QuestionsText": {}
-    };
+    public Questionnaire: IQuestionnaireModel = new QuestionnaireModel();
 
     private _appComponentService: AppComponentService = null;
 

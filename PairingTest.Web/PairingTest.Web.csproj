@@ -153,10 +153,20 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\main.css" />
+    <Content Include="dist\app.component.js" />
+    <Content Include="dist\app.component.service.js" />
+    <Content Include="dist\app.component.spec.js" />
+    <Content Include="dist\app.main.js" />
+    <Content Include="dist\app.module.js" />
+    <Content Include="dist\environments\environment.js" />
+    <Content Include="dist\environments\environment.prod.js" />
+    <Content Include="dist\polyfills.js" />
+    <Content Include="dist\test.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="gulpfile.js" />
+    <Content Include="karma.conf.js" />
     <Content Include="libs\%40angular\common\bundles\common-testing.umd.js" />
     <Content Include="libs\%40angular\common\bundles\common-testing.umd.min.js" />
     <Content Include="libs\%40angular\common\bundles\common.umd.js" />
@@ -578,9 +588,6 @@
     <Content Include="libs\zone.js\dist\zone.js" />
     <Content Include="libs\zone.js\dist\zone.min.js" />
     <Content Include="libs\zone.js\dist\zone_externs.js" />
-    <Content Include="Scripts\app.component.js" />
-    <Content Include="Scripts\app.main.js" />
-    <Content Include="Scripts\app.module.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -594,6 +601,16 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="angular-cli.json" />
+    <Content Include="dist\app.component.js.map" />
+    <Content Include="dist\app.component.service.js.map" />
+    <Content Include="dist\app.main.js.map" />
+    <Content Include="dist\app.module.js.map" />
+    <Content Include="dist\environments\environment.js.map" />
+    <Content Include="dist\environments\environment.prod.js.map" />
+    <Content Include="dist\polyfills.js.map" />
+    <Content Include="dist\test.js.map" />
+    <Content Include="dist\app.component.spec.js.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1318,9 +1335,15 @@
     <TypeScriptCompile Include="libs\rxjs\util\tryCatch.d.ts" />
     <TypeScriptCompile Include="libs\rxjs\util\UnsubscriptionError.d.ts" />
     <TypeScriptCompile Include="tsScripts\app.component.service.ts" />
+    <TypeScriptCompile Include="tsScripts\app.component.spec.ts" />
     <TypeScriptCompile Include="tsScripts\app.component.ts" />
     <TypeScriptCompile Include="tsScripts\app.main.ts" />
     <TypeScriptCompile Include="tsScripts\app.module.ts" />
+    <TypeScriptCompile Include="tsScripts\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="tsScripts\environments\environment.ts" />
+    <TypeScriptCompile Include="tsScripts\polyfills.ts" />
+    <TypeScriptCompile Include="tsScripts\test.ts" />
+    <TypeScriptCompile Include="tsScripts\Models\QuestionnaireModel.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -1685,6 +1708,7 @@
   <ItemGroup>
     <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

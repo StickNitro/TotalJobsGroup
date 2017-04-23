@@ -1,6 +1,7 @@
 ﻿const ts = require("gulp-typescript");
 const gulp = require("gulp");
 const clean = require("gulp-clean");
+const karma = require("karma");
 
 const destPath = "./libs/";
 
@@ -33,13 +34,22 @@ gulp.task("ts", (done) => {
         "tsScripts/*.ts"
     ])
         .pipe(tsProject(), undefined, ts.reporter.fullReporter());
-    return tsResult.js.pipe(gulp.dest("./Scripts"));
+    return tsResult.js.pipe(gulp.dest("./dist"));
 });
 
 gulp.task("watch", ["watch.ts"]);
 
 gulp.task("watch.ts", ["ts"], () => {
     return gulp.watch("tsScripts/*.ts", ["ts"]);
+});
+
+gulp.task("test", (done) => {
+    const karmaServer = new karma.Server({
+        singleRun: true
+    }, (exitCode) => { 
+        done();
+        process.exit(exitCode);
+    });
 });
 
 gulp.task("default", ["scriptsNStyles", "watch"]);
